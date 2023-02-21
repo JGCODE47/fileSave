@@ -1,0 +1,1 @@
+solo deben mirar el ejemplo que esta documentado en el index.php
