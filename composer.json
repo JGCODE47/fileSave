@@ -1,0 +1,14 @@
+{
+    "name": "jgcode/filesave",
+    "description": "Hola este plugins lo cree para subir cualquier tipo de archivo facilmente utilizando php ",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\autoload": "src/autoload"
+        }
+    },
+    "require": {
+        "composer-plugin-api": "^1.1"
+    }
+}

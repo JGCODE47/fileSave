@@ -25,5 +25,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-    include 'src/controllers/autoload.php'; 
-    include 'src/models/autoload.php';
+$namespaces = require __DIR__ . 'namespace.php';
+
+spl_autoload_register(function ($class) use ($namespaces) {
+    foreach ($namespaces as $namespace => $path) {
+        if (strpos($class, $namespace) === 0) {
+            $file = str_replace('\\', '/', substr($class, strlen($namespace))) . '.php';
+            require $path . $file;
+            return;
+        }
+    }
+});
+

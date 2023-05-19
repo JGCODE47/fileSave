@@ -27,7 +27,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-    include 'autoload.php'; 
 
 #para utilizar simplemente deben enviar 3 parametros al controlador FileSave::FileSaveDirectory("ruta", "nombre_carpeta", $_FILE)
 #dejo agregado un simple ejemplo con ajax y javascript puro espero den estrellas a mi github
