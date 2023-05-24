@@ -41,10 +41,10 @@ namespace App\models;
                     die('Fallo al crear las carpetas...');
                 }
             }
-           $ruta_new = $rute."/".$namedirectory."/";
+           $ruta_new = $rute.$namedirectory."/";
            $ext = explode("/", $file["file"]["type"]);
            $temp = $file["file"]["tmp_name"]; 
-           $name = basename($namedirectory.".".$ext[1]);
+           $name = basename($file["file"]["name"]);
            move_uploaded_file($temp, $ruta_new.$name);
            return $ruta_new.$name;
         }
